@@ -1,0 +1,32 @@
+.container {
+   margin: 0 auto;
+   display: grid;
+   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+   grid-template-columns:
+      [sidebar-start]8rem [sidebar-ends full-start] minmax(6rem, 1fr)
+      [centered-start]repeat(
+         8,
+         [col-start] minmax(min-content, 14.25rem) [col-end]
+      )
+      [centered-ends]
+      minmax(6rem, 1fr) [full-ends]; //14rem = 1140px / 8
+}
+
+@include responds(1000) {
+   .container {
+      grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+      grid-template-columns:
+         [full-start] minmax(6rem, 1fr)
+         [centered-start]repeat(
+            8,
+            [col-start] minmax(min-content, 14.25rem) [col-end]
+         )
+         [centered-ends]
+         minmax(6rem, 1fr) [full-ends]; //14rem = 1140px / 8
+   }
+}
+@include responds(800) {
+   .container {
+      grid-template-rows: 6rem calc(100vh - 6rem);
+   }
+}

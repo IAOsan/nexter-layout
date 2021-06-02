@@ -1,0 +1,19 @@
+.feature {
+   // grid
+   display: grid;
+   grid-template-columns: min-content 1fr;
+   grid-template-rows: auto;
+   row-gap: 1.5rem;
+   column-gap: 2.5rem;
+
+   &__icon {
+      width: 4.5rem;
+      height: 4.5rem;
+      fill: var(--c-primary);
+      grid-row: 1 / span 2;
+      margin-top: -0.8rem; //mueve el icono hacia arriba
+   }
+   &__text {
+      font-size: 1.7rem;
+   }
+}

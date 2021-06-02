@@ -1,0 +1,6 @@
+mixin feature(icon, title, desc)
+   article.feature   
+         svg.feature__icon    
+            use(xlink:href=`assets/img/sprite.svg#icon-${icon}`)
+         h4.title-4.title-4--dark #{title}
+         p.feature__text #{desc}
